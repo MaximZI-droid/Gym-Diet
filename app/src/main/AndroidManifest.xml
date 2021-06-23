@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ZiMax.gymdiet">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GymDiet">
+        <activity android:name=".AddNewDietActivity"></activity>
+        <activity android:name=".AddNewGymActivity" />
+        <activity android:name=".day.SundayActivity" />
+        <activity android:name=".day.SaturdayActivity" />
+        <activity android:name=".day.FridayActivity" />
+        <activity android:name=".day.ThursdayActivity" />
+        <activity android:name=".day.WednesdayActivity" />
+        <activity android:name=".day.TuesdayActivity" />
+        <activity android:name=".day.MondayActivity" />
+        <activity android:name=".DietActivity" />
+        <activity android:name=".GymActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="ZiMax.gymdiet"
+            android:name=".data.diet.DietContentProvider"
+            android:exported="false" />
+        <provider
+            android:authorities="ZiMax.gymdiet"
+            android:name=".data.gym.GymContentProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>
